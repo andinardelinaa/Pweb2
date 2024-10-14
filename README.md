@@ -92,7 +92,7 @@ echo $mahasiswa1->tampilkanData();
 ?>
 ```
 ### h). Coding
-![coding mahasiswa](https://github.com/user-attachments/assets/63461b02-c356-4281-ad29-542feddfbcdf)[Uploading modul1&2.php…]()
+![coding mahasiswa](https://github.com/user-attachments/assets/63461b02-c356-4281-ad29-542feddfbcdf)
 
 ### i). Menampilkan hasil output
  ![hasil instruksi](https://github.com/user-attachments/assets/1aa02483-39f8-46e5-ab7d-6a7401196e28)
@@ -103,7 +103,8 @@ echo $mahasiswa1->tampilkanData();
   ## Kelas Dosen
 
  ### a). Implementasikan kelas Dosen dengan atribut nama, nip, dan mataKuliah.
--<h4>Atribut :</h4>
+
+- <h4>Atribut :</h4>
 ```php
 <?php
 class Dosen {
@@ -115,7 +116,7 @@ class Dosen {
 ```
   - <h4>Method :</h4>
 ### b). Membuat constructor untuk menginisialisasi atribut nama, NIP, dan mata kuliah
-  1. Construct => untuk menginisialisasi atribut nama, nip, matakuliah yang digunakan untuk mengatur nilai awal atribut saat objek dibuat<br>
+Construct => untuk menginisialisasi atribut nama, nip, matakuliah yang digunakan untuk mengatur nilai awal atribut saat objek dibuat<br>
 ```php
 <?php 
 public function __construct($nama, $nip, $mataKuliah) {
@@ -126,7 +127,7 @@ public function __construct($nama, $nip, $mataKuliah) {
  ?>
  ```
 ### c).Buat metode tampilkanDosen() untuk menampilkan informasi dosen
-  2. Methode tampilkanDosen() untuk menampilkan data dosen
+Methode tampilkanDosen() untuk menampilkan data dosen
 ```php
 <?php
 public function tampilkanDosen() {
@@ -135,7 +136,7 @@ public function tampilkanDosen() {
 ?>
 ```
 ### d). Buat objek dari kelas Dosen, dan gunakan metode tampilkanDosen() untukmenampilkan informasi tersebut
-  - Instansiasi atau pembentukan data Dosen
+Instansiasi atau pembentukan data Dosen
  ```php
 <?php
 $dosen1 = new Dosen("Andin Ardelina", "123456789012", "Praktikum Web");
@@ -343,11 +344,50 @@ abstract class Pengguna  {
  ?>
  ```
 ### b). Implementasikan class Mahasiswa dan Dosen yang mengimplementasikan metode abstrak tersebut.
-![abstract mhs](https://github.com/user-attachments/assets/c9044c79-6876-4e6a-91ed-bfed684f6b18)
-![abstract dosen](https://github.com/user-attachments/assets/04c61968-52ed-4431-805f-427479d36d53)
+menghapus isi abstrac function yang ada pada class pengguna, dan anakan kelas yang akan menggunakan wajib mengoverride
+ ```php
+<?php
+abstract public function aksesFitur();
+?>
+```
+dalam class mahasiswa mengoveride
+ ```php
+<?php
+ public function aksesFitur() {
+        return "Akses fitur khusus Dosen: Melihat Nilai dan mengisi KRS";
+    }
+?>
+```
+dalam class Dosen mengoveride
+ ```php
+<?php
+ public function aksesFitur() {
+        return "Akses fitur khusus Dosen: Mengelola mata kuliah dan penilaian.";
+    }
+?>
+```
 
 ### c). Demonstrasikan dengan memanggil metode aksesFitur() dari objek yang diinstansiasi.
-![intansiasi abstract](https://github.com/user-attachments/assets/4004305b-8f5a-4108-ab5e-3f5a8e4ad7ad)
+```php
+<?php
+$dosen1 = new Dosen ("Bu Andin", "Pemrograman Web");
+$mahasiswa1 = new Mahasiswa("Andin", "123456", "Teknik Informatika");
+//menampilkan data Dosen
+echo "<br><b>Dosen : </b></br>";
+echo $dosen1->tampilkanDataDosen();
+echo $dosen1->aksesFitur(). "<br>";
+echo "<br><b>Mahasiswa : </b></br>";
+echo $mahasiswa1->tampilkanData();
+echo $mahasiswa1->aksesFitur(). "<br>";
+?>
+```
+### d). Coding
+![1](https://github.com/user-attachments/assets/88802b76-9a3a-4178-b757-9024a2785270)
+![2](https://github.com/user-attachments/assets/764855d5-f177-45b7-9bae-ad7c199d5ae5)
+### e). Output
+![3](https://github.com/user-attachments/assets/c2fea147-b028-4dcf-8c28-858d368df659)
+
+
 
 
 
