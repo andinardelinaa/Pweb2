@@ -43,7 +43,7 @@ Dengan access modifier public, bisa digunakan darimana saja. atribut digunakan u
   3. mata kuliah = mata kuliah yang diampu dosen
 
   - <h4>Method :</h4>
-  1. Construct, untuk menginisialisasi atribut nama, nip, matakuliah yang digunakan untuk mengatur nilai awal atribut saat objek dibuat
+  1. Construct, untuk menginisialisasi atribut nama, nip, matakuliah yang digunakan untuk mengatur nilai awal atribut saat objek dibuat<br>
      ![construct dosen](https://github.com/user-attachments/assets/2e8f1b54-732a-4145-937c-ccfdb1865940)
   2. Methode tampilkanDosen() untuk menampilkan adata dosen
      ![tampilkandosen](https://github.com/user-attachments/assets/53cbdc5b-512c-45bd-aadc-9c29eacb9420)
