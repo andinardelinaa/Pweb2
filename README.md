@@ -16,33 +16,85 @@ digunakan kembali.<br>
 ## Kelas Mahasiswa
 
 ### a). Buat class Mahasiswa yang memiliki atribut nama, nim, dan jurusan
+
 - <h4>Atribut</h4> 
-1. nama =nama mahasiswa
-2. nim= nomor induk mahasiswa
-3. jurusan = jurusan mahasiswa<br>
+```php
+<?php
+class Mahasiswa {
+    //atribut / properti untuk dosen
+    public $nama;
+    public $nim;
+    public $jurusan;
+ ?>
+ ```
 Dengan access modifier public, bisa digunakan darimana saja. atribut digunakan untuk menyimpan data atau keadaan dari objek.
 
 - <h4>Methode :</h4> 
 ### b). Buat metode tampilkanData() dalam class Mahasiswa.
-1. Method tampilkanData() untuk menampilkan data mahasiswa atribut nama, nim, dan jurusan
- ![method](https://github.com/user-attachments/assets/248e23a9-fb8b-48ad-94d2-a70ef9aea020)
+Method tampilkanData() untuk menampilkan data mahasiswa atribut nama, nim, dan jurusan
+  ```php
+<?php
+ public function tampilkanData() {
+        return "Hai, Nama saya $this->nama dengan NIM $this->nim dari Jurusan $this->jurusan<br>";
+    }
+   ?>
+   ```
 ### c). Tambahkan constructor pada kelas Mahasiswa yang akan menginisialisasi
-2. Method construct, digunakan untuk menginisialisasi atribut, nama, nim, jurusan yang digunakan untuk mengatur nilai awal atribut saat objek dibuat<br>
-   ![construct](https://github.com/user-attachments/assets/fc65f63b-848a-4f02-8194-229573ebbcbe)
+Method construct, digunakan untuk menginisialisasi atribut, nama, nim, jurusan yang digunakan untuk mengatur nilai awal atribut saat objek dibuat<br>
+```php
+<?php
+    public function __construct($nama, $nim, $jurusan) {
+        $this->nama = $nama;
+        $this->nim = $nim;
+        $this->jurusan = $jurusan;
+    }
+?>
+```
 ### d). Buat metode updateJurusan() dalam kelas Mahasiswa yang memungkinkan perubahan jurusan.
-5. Method updateJurusan() untuk memungkinkan perubahan jurusan
-   ![update jurusan](https://github.com/user-attachments/assets/56045d39-7905-4a3b-bd46-55335313f3a5)
+Method updateJurusan() untuk memungkinkan perubahan jurusan
+```php
+<?php
+    public function updateJurusan($jurusanBaru) {
+            $this->jurusan = $jurusanBaru;
+    }
+   ?>
+```
 ### e). Ubah nilai atribut nim dari objek Mahasiswa menggunakan metode setter.
-7. Methode updateNIM() untuk memungkinkan perubahan NIM
-   ![update nim](https://github.com/user-attachments/assets/861a2f8a-5217-467b-8854-1eec47011231)
+Methode updateNIM() untuk memungkinkan perubahan NIM
+```php
+<?php
+ public function updateNIM ($nimBaru) {
+            $this->nim= $nimBaru;
+    }
+?>
+```
 ### f). Instansiasi objek Mahasiswa
-- <b>Instansiasi</b> objek Mahasiswa, instansiasi pembentukan objek mahasiswa
-   ![instansiasi](https://github.com/user-attachments/assets/0e4f0870-3476-420c-b75d-3ea4b52225a5)
+<b>Instansiasi</b> objek Mahasiswa, instansiasi pembentukan objek mahasiswa
+ ```php
+<?php
+$mahasiswa1 = new Mahasiswa("Andin", "230102052", "Komputer dan Bisnis");
+echo $mahasiswa1->tampilkanData();
+echo "<br>";
+?>
+```
 ### g). menggunakan metode updateJurusan() dan updateNim() untuk mengubah jurusan dan nim
-- Update Jurusan dan NIM
-  ![update](https://github.com/user-attachments/assets/488957b4-4a83-4fde-a247-10d94d748b79)
-### h). Menampilkan hasil output
-- Output
+Update Jurusan dan NIM
+```php
+<?php
+$mahasiswa1->updateJurusan("Teknik Informatika");
+echo "Data setelah Jurusan baru: <br>";
+echo $mahasiswa1->tampilkanData();
+echo "<br>";
+
+$mahasiswa1->updateNIM("230102022");
+echo "Data setelah NIM baru: <br>";
+echo $mahasiswa1->tampilkanData();
+?>
+```
+### h). Coding
+![coding mahasiswa](https://github.com/user-attachments/assets/63461b02-c356-4281-ad29-542feddfbcdf)[Uploading modul1&2.php…]()
+
+### i). Menampilkan hasil output
  ![hasil instruksi](https://github.com/user-attachments/assets/1aa02483-39f8-46e5-ab7d-6a7401196e28)
 
 
@@ -51,23 +103,49 @@ Dengan access modifier public, bisa digunakan darimana saja. atribut digunakan u
   ## Kelas Dosen
 
  ### a). Implementasikan kelas Dosen dengan atribut nama, nip, dan mataKuliah.
-  - <h4>Atribut :</h4>
-  1. nama = nama dosen
-  2. NIP = nomor induk pegawai
-  3. mata kuliah = mata kuliah yang diampu dosen
-
+-<h4>Atribut :</h4>
+```php
+<?php
+class Dosen {
+    public $nama;
+    public $nip;
+    public $mataKuliah;
+}
+?>
+```
   - <h4>Method :</h4>
 ### b). Membuat constructor untuk menginisialisasi atribut nama, NIP, dan mata kuliah
-  1. Construct, untuk menginisialisasi atribut nama, nip, matakuliah yang digunakan untuk mengatur nilai awal atribut saat objek dibuat<br>
-     ![construct dosen](https://github.com/user-attachments/assets/2e8f1b54-732a-4145-937c-ccfdb1865940)
+  1. Construct => untuk menginisialisasi atribut nama, nip, matakuliah yang digunakan untuk mengatur nilai awal atribut saat objek dibuat<br>
+```php
+<?php 
+public function __construct($nama, $nip, $mataKuliah) {
+        $this->nama = $nama;
+        $this->nip = $nip;
+        $this->mataKuliah = $mataKuliah;
+    }
+ ?>
+ ```
 ### c).Buat metode tampilkanDosen() untuk menampilkan informasi dosen
-  3. Methode tampilkanDosen() untuk menampilkan adata dosen
-     ![tampilkandosen](https://github.com/user-attachments/assets/53cbdc5b-512c-45bd-aadc-9c29eacb9420)
+  2. Methode tampilkanDosen() untuk menampilkan data dosen
+```php
+<?php
+public function tampilkanDosen() {
+        return "Hai, Nama saya $this->nama dengan NIP $this->nip mengampu matakuliah $this->mataKuliah.";
+    }
+?>
+```
 ### d). Buat objek dari kelas Dosen, dan gunakan metode tampilkanDosen() untukmenampilkan informasi tersebut
-  - Instansiasi Dosen
-  ![instansiasi dosen](https://github.com/user-attachments/assets/245a07ac-5abc-4b6a-a841-ef340648441d)
-### e). Hasil Output
-- Output
+  - Instansiasi atau pembentukan data Dosen
+ ```php
+<?php
+$dosen1 = new Dosen("Andin Ardelina", "123456789012", "Praktikum Web");
+echo $dosen1->tampilkanDosen();
+echo "<br>";
+?>
+```
+### e). Coding
+![coding dosen](https://github.com/user-attachments/assets/3eda76e5-d2b2-47ba-92f2-5f51bcc0ed7d)
+### f). Hasil Output
 ![hasil tugas1](https://github.com/user-attachments/assets/da0ff367-a3e6-4e5e-bdd7-934394c8c637)
 
 
@@ -85,34 +163,191 @@ digunakan untuk memodelkan masalah dunia nyata ke dalam kode program. Prinsip- p
 ## Instruksi 
 ## 1. Membuat Class dan Object
 ### a). Membuat class Mahasiswa yang memiliki atribut nama, nim, dan jurusan.
-![atribut mahasiswa](https://github.com/user-attachments/assets/6ed4b6fc-5979-464a-a73e-9b3259b8d63c)
+```php
+<?php
+class Mahasiswa {
+    //atribut / properti untuk dosen
+    public $nama;
+    public $nim;
+    public $jurusan;
+ ?>
+ ```
 ### b). Buat metode tampilkanData() dalam class Mahasiswa.
-digunakan untuk memanmpilkan data mahasiswa
-![tampildata mhs](https://github.com/user-attachments/assets/25e02d35-51a1-408e-9197-5f3c524a0990)
+Method tampilkanData() untuk menampilkan data mahasiswa atribut nama, nim, dan jurusan
+  ```php
+<?php
+ public function tampilkanData() {
+        return "Hai, Nama saya $this->nama dengan NIM $this->nim dari Jurusan $this->jurusan<br>";
+    }
+   ?>
+   ```
 ### c). Instansiasi objek dari class Mahasiswa dan tampilkan data mahasiswa tersebut.
-![instansiasi mhs](https://github.com/user-attachments/assets/e17320c2-df1c-4fa8-a527-651f03416cd0)
+<b>Instansiasi</b> objek Mahasiswa, instansiasi pembentukan objek mahasiswa
+ ```php
+<?php
+$mahasiswa1 = new Mahasiswa("Andin", "230102052", "Komputer dan Bisnis");
+echo $mahasiswa1->tampilkanData();
+echo "<br>";
+?>
+```
 ## 2. Encapsulasi
 ### a). Ubah atribut dalam class Mahasiswa menjadi private
-![atribut private](https://github.com/user-attachments/assets/678dba94-342f-45dd-9e7e-67988b477a71)
+```php
+<?php
+//mahasiswa mengambil sifat dari class pengguna
+class Mahasiswa {
+    //atribut
+    private $nama;
+    private $nim;
+    private $jurusan;
+ ?>
+ ```
 ### b). Buat metode getter dan setter untuk atribut nama, nim, dan jurusan.
-![getset mhs](https://github.com/user-attachments/assets/b52e2f15-8b3a-44d3-a283-0d515be95a2b)
+```php
+<?php
+public function getNama() {
+        return $this->nama;
+    }
+    public function setNama($nama) {
+        $this->nama =$nama;
+    }
+    public function getNim() {
+        return $this->nim;
+    }
+    public function setNim($nim) {
+        $this->nim =$nim;
+    }
+    public function getJurusan() {
+        return $this->jurusan;
+    }
+    public function setJurusan($jurusan) {
+        $this->jurusan =$jurusan;
+    }
+?>
+```
 ### c). Demonstrasikan akses ke atribut menggunakan metode getter dan setter.
-![demo get set mhs](https://github.com/user-attachments/assets/ae86b4e2-a7a0-478c-a60a-e0cb1f97bd8a) 
+```php
+<?php
+echo "Nama : ".$mahasiswa1->getNama(). "<br>";
+echo "NIM : " .$mahasiswa1->getNim(). "<br>";
+echo "Jurusan : " .$mahasiswa1->getJurusan(). "<br>";
+
+//mengubah nama dan jurusan menggunakan setter
+$mahasiswa1->setNama ("Andin Ardelina");
+$mahasiswa1->setNim("1234567890");
+$mahasiswa1->setJurusan ("Teknik Informatika");
+
+echo "<br><b>Data Setelah perubahan: </b></br>";
+echo $mahasiswa1->tampilkanData();
+?>
+```
 ## 3. Inheritence
 ### a). Buat class Pengguna dengan atribut nama dan metode getNama().
-![class pengguna](https://github.com/user-attachments/assets/dca4101a-0aa2-4313-8c34-fbf1b3eaf57b)
+```php
+<?php
+class Pengguna  {
+    protected $nama;
+
+    public function __construct($nama) {
+        $this->nama = $nama;
+    }
+    public function getNama() {
+        return $this->nama;
+    }
+}
+?>
+```
 ### b). Buat class Dosen yang mewarisi class Pengguna dan tambahkan atribut mataKuliah.
-![class dosen](https://github.com/user-attachments/assets/7b53f8ce-1616-45cf-b3f8-1fb9c68cce50)
+```php
+<?php
+class Dosen extends Pengguna{
+    private $mataKuliah;
+
+    public function __construct($nama, $mataKuliah) {
+        parent :: __construct($nama);
+        $this->mataKuliah = $mataKuliah;
+    }
+    //getter untuk mata kuliah
+    public function getMatakuliah() {
+        return $this->mataKuliah;
+    }
+    //method untuk menampilkan data dosen
+    public function tampilkanDataDosen() {
+        return "Dosen : $this->nama, Mata Kuliah: $this->mataKuliah<br>";
+    }
+}
+?>
+```
 ### c). Instansiasi objek dari class Dosen dan tampilkan data dosen.
-![instansiasi class dosen2](https://github.com/user-attachments/assets/91dbb5ff-fdc6-406c-a488-b3b520d7abaf)
+```php
+<?php
+$dosen1 = new Dosen ("Bu Andin", "Pemrograman Web");
+echo "<br><b>Dosen : </b></br>";
+echo $dosen1->tampilkanDataDosen();
+?>
+```
 ## 4. Polymorphism
 ### a). Buat class Pengguna dengan metode aksesFitur().
-![aksekfitur](https://github.com/user-attachments/assets/66268a31-d8b6-4650-bc24-6b826003f639)
+```php
+<?php
+ public function aksesFitur() {
+        return "Akses fitur khusus Dosen: Mengelola mata kuliah dan penilaian.";
+    }
+?>
+```
 ### b). Implementasikan aksesFitur() dengan cara berbeda di class Dosen dan Mahasiswa.
-![akses fitur dosen](https://github.com/user-attachments/assets/5e52a890-5020-48af-8f4e-1e442c55db3c)
-![akses fitur mhs](https://github.com/user-attachments/assets/14761844-52df-46c7-ad9e-caf4f4220488)
+aksesFitur() pada Dosen
+ ```php
+<?php public function aksesFitur() {
+        return "Akses fitur khusus Dosen: Mengelola mata kuliah dan penilaian.";
+    }
+?>
+```
+aksesFitur() pada Mahasiswa
+```php
+<?php
+public function aksesFitur() {
+        return "Akses fitur khusus Dosen: Melihat Nilai dan mengisi KRS";
+    }
+?>
+```
 ### c). Instansiasi objek dari class Dosen dan Mahasiswa, lalu panggil metode aksesFitur().
-![instansiasi class dosen](https://github.com/user-attachments/assets/8d962920-060b-4697-8007-c2e8ce107acb)
+```php
+<?php
+$dosen1 = new Dosen ("Bu Andin", "Pemrograman Web");
+$mahasiswa1 = new Mahasiswa("Andin", "123456", "Teknik Informatika");
+//menampilkan data Dosen
+echo "<br><b>Dosen : </b></br>";
+echo $dosen1->tampilkanDataDosen();
+echo $dosen1->aksesFitur(). "<br>";
+echo "<br><b>Mahasiswa : </b></br>";
+echo $mahasiswa1->tampilkanData();
+echo $mahasiswa1->aksesFitur(). "<br>";
+?>
+```
+## Abstraction
+### a). Buat class abstrak Pengguna dengan metode abstrak aksesFitur().
+```php
+<?php
+abstract class Pengguna  {
+    protected $nama;
+
+    public function __construct($nama) {
+        $this->nama = $nama;
+    }
+    public function getNama() {
+        return $this->nama;
+    }
+    abstract public function aksesFitur();
+ }
+ ?>
+ ```
+### b). Implementasikan class Mahasiswa dan Dosen yang mengimplementasikan metode abstrak tersebut.
+![abstract mhs](https://github.com/user-attachments/assets/c9044c79-6876-4e6a-91ed-bfed684f6b18)
+![abstract dosen](https://github.com/user-attachments/assets/04c61968-52ed-4431-805f-427479d36d53)
+
+### c). Demonstrasikan dengan memanggil metode aksesFitur() dari objek yang diinstansiasi.
+![intansiasi abstract](https://github.com/user-attachments/assets/4004305b-8f5a-4108-ab5e-3f5a8e4ad7ad)
 
 
 
