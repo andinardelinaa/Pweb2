@@ -191,7 +191,7 @@ echo $mahasiswa1->tampilkanData();
 echo "<br>";
 ?>
 ```
-## 2. Encapsulasi
+## 2. Encapsulasi 
 ### a). Ubah atribut dalam class Mahasiswa menjadi private
 ```php
 <?php
@@ -199,10 +199,11 @@ echo "<br>";
 class Mahasiswa {
     //atribut
     private $nama;
-    private $nim;
+    private $nim; 
     private $jurusan;
  ?>
  ```
+mengubah atribut menjadi privat, hanya dapat diakses oleh kelas itu sendiri
 ### b). Buat metode getter dan setter untuk atribut nama, nim, dan jurusan.
 ```php
 <?php
