@@ -43,7 +43,8 @@ Dengan access modifier public, bisa digunakan darimana saja. atribut digunakan u
   ![update](https://github.com/user-attachments/assets/488957b4-4a83-4fde-a247-10d94d748b79)
 ### h). Menampilkan hasil output
 - Output
-  ![mahasiswa](https://github.com/user-attachments/assets/0f80c30b-afac-44e1-bebc-e207940519c1)
+ ![hasil instruksi](https://github.com/user-attachments/assets/1aa02483-39f8-46e5-ab7d-6a7401196e28)
+
 
 <hr>
 
@@ -67,7 +68,8 @@ Dengan access modifier public, bisa digunakan darimana saja. atribut digunakan u
   ![instansiasi dosen](https://github.com/user-attachments/assets/245a07ac-5abc-4b6a-a841-ef340648441d)
 ### e). Hasil Output
 - Output
-  ![dosen](https://github.com/user-attachments/assets/ccfcc912-6f3b-4c71-ae26-5ee1303abadd)
+![hasil tugas1](https://github.com/user-attachments/assets/da0ff367-a3e6-4e5e-bdd7-934394c8c637)
+
 
 
 # JOBSHEET 2
@@ -78,6 +80,43 @@ digunakan untuk memodelkan masalah dunia nyata ke dalam kode program. Prinsip- p
 - Inheritence (pewarisan) => kelas dapat mewarisi atribut atau properti dan metode dari kelas lain
 - polymorphism => metode yang sama dapat memiliki implementasi yang berbeda dalam class yang berbeda
 - Abstraction => Menyembunyikan detai implementasi dan hanya menampilkan fungsi penting
+<hr>
+
+## Instruksi 
+## 1. Membuat Class dan Object
+### a). Membuat class Mahasiswa yang memiliki atribut nama, nim, dan jurusan.
+![atribut mahasiswa](https://github.com/user-attachments/assets/6ed4b6fc-5979-464a-a73e-9b3259b8d63c)
+### b). Buat metode tampilkanData() dalam class Mahasiswa.
+digunakan untuk memanmpilkan data mahasiswa
+![tampildata mhs](https://github.com/user-attachments/assets/25e02d35-51a1-408e-9197-5f3c524a0990)
+### c). Instansiasi objek dari class Mahasiswa dan tampilkan data mahasiswa tersebut.
+![instansiasi mhs](https://github.com/user-attachments/assets/e17320c2-df1c-4fa8-a527-651f03416cd0)
+## 2. Encapsulasi
+### a). Ubah atribut dalam class Mahasiswa menjadi private
+![atribut private](https://github.com/user-attachments/assets/678dba94-342f-45dd-9e7e-67988b477a71)
+### b). Buat metode getter dan setter untuk atribut nama, nim, dan jurusan.
+![getset mhs](https://github.com/user-attachments/assets/b52e2f15-8b3a-44d3-a283-0d515be95a2b)
+### c). Demonstrasikan akses ke atribut menggunakan metode getter dan setter.
+![demo get set mhs](https://github.com/user-attachments/assets/ae86b4e2-a7a0-478c-a60a-e0cb1f97bd8a) 
+## 3. Inheritence
+### a). Buat class Pengguna dengan atribut nama dan metode getNama().
+![class pengguna](https://github.com/user-attachments/assets/dca4101a-0aa2-4313-8c34-fbf1b3eaf57b)
+### b). Buat class Dosen yang mewarisi class Pengguna dan tambahkan atribut mataKuliah.
+![class dosen](https://github.com/user-attachments/assets/7b53f8ce-1616-45cf-b3f8-1fb9c68cce50)
+### c). Instansiasi objek dari class Dosen dan tampilkan data dosen.
+![instansiasi class dosen2](https://github.com/user-attachments/assets/91dbb5ff-fdc6-406c-a488-b3b520d7abaf)
+## 4. Polymorphism
+### a). Buat class Pengguna dengan metode aksesFitur().
+![aksekfitur](https://github.com/user-attachments/assets/66268a31-d8b6-4650-bc24-6b826003f639)
+### b). Implementasikan aksesFitur() dengan cara berbeda di class Dosen dan Mahasiswa.
+![akses fitur dosen](https://github.com/user-attachments/assets/5e52a890-5020-48af-8f4e-1e442c55db3c)
+![akses fitur mhs](https://github.com/user-attachments/assets/14761844-52df-46c7-ad9e-caf4f4220488)
+### c). Instansiasi objek dari class Dosen dan Mahasiswa, lalu panggil metode aksesFitur().
+![instansiasi class dosen](https://github.com/user-attachments/assets/8d962920-060b-4697-8007-c2e8ce107acb)
+
+
+
+
 
 
 
